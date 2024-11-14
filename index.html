@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Evolution Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Football Evolution Manager</h1>
+        
+        <div id="team-creation">
+            <h2>Crie seu Time</h2>
+            <label for="team-name">Nome do Time:</label>
+            <input type="text" id="team-name" required>
+
+            <label for="team-country">País:</label>
+            <select id="team-country">
+                <option value="Brasil">Brasil</option>
+                <option value="Espanha">Espanha</option>
+            </select>
+
+            <label for="team-color">Cor do Time:</label>
+            <input type="color" id="team-color" value="#ff0000">
+
+            <label for="stadium-name">Nome do Estádio:</label>
+            <input type="text" id="stadium-name" placeholder="Escolha o nome do estádio" required>
+
+            <button id="register-team">Registrar Time</button>
+        </div>
+
+        <div id="home" style="display: none;">
+            <h2>Home</h2>
+            <div class="info" id="club-info">
+                <p id="club-name"></p>
+                <p id="stadium-info"></p>
+                <p id="team-cash"></p>
+            </div>
+
+            <h3>Última Partida</h3>
+            <p id="last-match">Nenhuma partida jogada ainda.</p>
+
+            <h3>Tabela de Classificação</h3>
+            <table id="standings">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Jogos</th>
+                        <th>Vitórias</th>
+                        <th>Derrotas</th>
+                        <th>Pontos</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                </tbody>
+            </table>
+
+            <h3>Jogadores do Time</h3>
+            <button id="view-players">Ver Jogadores</button>
+            <table id="players-table" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>Nome do Jogador</th>
+                        <th>Posição</th>
+                        <th>GER</th>
+                        <th>Lesionado</th>
+                    </tr>
+                </thead>
+                <tbody id="players-body">
+                </tbody>
+            </table>
+
+            <button id="play-match">Simular Partida</button>
+            <button id="improve-stadium">Melhorar Estádio</button>
+
+            <h3>Histórico de Jogos</h3>
+            <ul id="match-history"></ul>
+
+            <h3>Transferência de Jogadores</h3>
+            <button id="transfer-players">Transferir Jogadores</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
